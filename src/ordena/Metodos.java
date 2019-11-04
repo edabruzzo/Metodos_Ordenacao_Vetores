@@ -34,13 +34,17 @@ public class Metodos extends Sort {
     public void bubbleSort(int[] vetor) {
 
         //Inicia a marcação do tempo
-        long inicio = System.currentTimeMillis();
+    //    long inicio = System.currentTimeMillis();
+
+        long inicio = System.nanoTime();
 
         bubbleSortImplem(vetor);
 
         //Finaliza a marcação do tempo
-        long fim = System.currentTimeMillis();
-        //Determina o tempo decorrido
+//        long fim = System.currentTimeMillis();
+        long fim = System.nanoTime();
+    
+//Determina o tempo decorrido
         long tempo = fim - inicio;
         //chama a função passando o nome do arquivo
         //Nesse caso, o nome do arquivo é bolha.txt.
@@ -50,13 +54,13 @@ public class Metodos extends Sort {
     @Override
     public void insertionSort(int[] vetor) {
 
-        long inicio = System.currentTimeMillis();
+        long inicio = System.nanoTime();
 
         insertionSortImplem(vetor);
 
         //Finaliza a marcação do tempo
-        long fim = System.currentTimeMillis();
-        //Determina o tempo decorrido
+        long fim = System.nanoTime();
+    //Determina o tempo decorrido
         long tempo = fim - inicio;
         //chama a função passando o nome do arquivo
         //Nesse caso, o nome do arquivo é bolha.txt.
@@ -66,12 +70,12 @@ public class Metodos extends Sort {
     @Override
     public void selectionSort(int[] vetor) {
 
-        long inicio = System.currentTimeMillis();
+    long inicio = System.nanoTime();
 
         selectionSortImpl(vetor);
 
         //Finaliza a marcação do tempo
-        long fim = System.currentTimeMillis();
+    long fim = System.nanoTime();
         //Determina o tempo decorrido
         long tempo = fim - inicio;
         //chama a função passando o nome do arquivo
@@ -86,7 +90,7 @@ public class Metodos extends Sort {
         try {
             //Abre um arquivo com o nome passado por parâmetro.
             //Mude o diretório e a pasta
-            arquivo = new FileWriter("E:/resultados/ " + metodo, true);
+            arquivo = new FileWriter("C:/Users/Emm/Documents/ProjetoMetodosOrdena/resultados/ " + metodo, true);
             //Arquivo para escrita.
             salvarArquivo = new PrintWriter(arquivo);
            // salvarArquivo.println("TAMANHO " + "\t" + " TEMPO (ms)");
@@ -178,7 +182,7 @@ public class Metodos extends Sort {
         long tempo = fim - inicio;
         //chama a função passando o nome do arquivo
         //Nesse caso, o nome do arquivo é bolha.txt.
-        file("bolha.txt", vetor.length, tempo);
+    //    file("bolha.txt", vetor.length, tempo);
     }
 
 

@@ -14,14 +14,31 @@ public class Programa {
     public static void main(String[] args) {
         
        Metodos metodos = new Metodos();
-        
-        
+     
+       /*
        for(int i = 0; i < 50; i++){
             
         int vetor[] = new int[metodos.TAMANHO_VETOR]; 
         metodos.random(vetor);
         Programa.executarQuickSort(vetor);
         Programa.executarMergeSort(vetor);
+        
+        metodos.TAMANHO_VETOR += 10000;
+        
+        
+    }
+       
+       */
+       
+       
+       for(int i = 0; i < 11; i++){
+            
+        int vetor[] = new int[metodos.TAMANHO_VETOR]; 
+        metodos.random(vetor);
+        
+//        metodos.bubbleSort(vetor);
+  //      metodos.selectionSort(vetor);
+        metodos.insertionSort(vetor);
         
         metodos.TAMANHO_VETOR += 10000;
         
